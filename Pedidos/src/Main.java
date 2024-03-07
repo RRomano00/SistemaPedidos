@@ -25,5 +25,8 @@ public class Main {
         System.out.println("Extrato pedido 1: " + pedido1.obterExtrato());
         System.out.println("Extrato pedido 2: " + pedido2.obterExtrato());
 
+        // Outra forma de exibir o extrato
+        pedido1.mostrarExtrato();
+        pedido2.mostrarExtrato();
     }
 }

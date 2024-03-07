@@ -48,4 +48,10 @@ public class Pedidos {
 
         return extrato;
     }
+
+    public void mostrarExtrato(){
+        System.out.println("Numero: " + this.numero);
+        System.out.println("Cliente: " + this.nomeCliente);
+        System.out.println("Prato:" + this.prato.getNome());
+    }
 }
