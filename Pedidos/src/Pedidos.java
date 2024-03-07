@@ -14,20 +14,20 @@ public class Pedidos {
         this.cupom = "";
     }
 
-    public void setCupom(String cupom){
+    public void setCupom(String cupom) {
         this.cupom = cupom;
     }
 
-    public double calcularValor(){
+    public double calcularValor() {
         double valorPedido;
-        valorPedido = (prato.getPreco()*this.quantidade)- this.obterDescontoCupom();
+        valorPedido = (prato.getPreco() * this.quantidade) - this.obterDescontoCupom();
 
         return valorPedido;
     }
 
-    private double obterDescontoCupom(){
+    private double obterDescontoCupom() {
         double desconto;
-        switch(this.cupom){
+        switch (this.cupom) {
             case "OFERTA10":
                 desconto = 10.0;
                 break;
@@ -39,5 +39,13 @@ public class Pedidos {
         }
 
         return desconto;
+    }
+
+    public String obterExtrato(){
+        String extrato = "Número:" + this.numero + "\n" + "Cliente: " + this.nomeCliente + "\n" +"Nome prato: " + this.prato.getNome()
+                + "\n" + "Valor unitário: "+ this.prato.getPreco() + "\n" + "Quantidade:" + this.quantidade + "\n" +
+                "Desconto: " + this.obterDescontoCupom() + "\n" + "Valor final: " + this.calcularValor() + "\n";
+
+        return extrato;
     }
 }

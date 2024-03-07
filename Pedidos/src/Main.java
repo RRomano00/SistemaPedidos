@@ -19,6 +19,11 @@ public class Main {
         //Calcular valor dos pedidos
         System.out.println("Pedido 1: " + pedido1.calcularValor());
         System.out.println("Pedido 2: " + pedido2.calcularValor());
-        
+
+        // Exibir extrado do pedido
+        System.out.println("");
+        System.out.println("Extrato pedido 1: " + pedido1.obterExtrato());
+        System.out.println("Extrato pedido 2: " + pedido2.obterExtrato());
+
     }
 }
